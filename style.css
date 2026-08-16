@@ -125,7 +125,7 @@ body {
 
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 40px 15px;
     background: #1e3a8a;
 }
 
@@ -231,8 +231,46 @@ footer {
         font-size: 12px;
     }
 }
-<<<<<<< HEAD
 }
-=======
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
->>>>>>> 77abf515ce5d9fb8284ed6316cc1a38b35a7920d
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    header {
+        width: 100%;
+        padding: 40px 15px;
+    }
+
+    section {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 15px;
+        margin: 0;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    .project-link {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
