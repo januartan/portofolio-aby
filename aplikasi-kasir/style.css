@@ -1,0 +1,1220 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f7fb,
+            #eef3f9
+        );
+
+    color: #1e293b;
+
+    padding: 45px 25px;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.kasir-container {
+    width: 100%;
+    max-width: 1120px;
+
+    margin: auto;
+
+    padding: 38px 40px 45px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9f0;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    position: relative;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+    padding: 8px 4px;
+}
+
+.header-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+.header-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1677ff,
+            #1557a6
+        );
+
+    border-radius: 16px;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(22,119,255,0.20);
+}
+
+.header h1 {
+    color: #1557a6;
+
+    font-size: 31px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.7px;
+
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+.status-online {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+
+    color: #15803d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.status-online span {
+    width: 8px;
+    height: 8px;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   SECTION TITLE
+========================================================= */
+
+.section-title {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 17px;
+}
+
+.section-title h2 {
+    font-size: 21px;
+
+    color: #1e293b;
+
+    font-weight: 800;
+
+    margin-bottom: 4px;
+}
+
+.section-title p {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FORM LAYOUT
+========================================================= */
+
+.kasir-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        260px;
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.form-card {
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 7px 25px
+        rgba(15,23,42,0.04);
+}
+
+.form-card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.mini-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #edf5ff;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+}
+
+.form-card-title h3 {
+    font-size: 16px;
+
+    color: #1e293b;
+
+    margin-bottom: 3px;
+}
+
+.form-card-title p {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        0.8fr
+        1fr
+        1fr;
+
+    gap: 17px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.field {
+    min-width: 0;
+}
+
+.field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.field select,
+.field input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 13px;
+
+    border:
+        1px solid #dce3eb;
+
+    border-radius: 10px;
+
+    background: #f9fbfd;
+
+    color: #334155;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.field select:focus,
+.field input:focus {
+    background: #ffffff;
+
+    border-color: #1677ff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22,119,255,0.08);
+}
+
+#harga {
+    background: #f0f6ff;
+
+    color: #1557a6;
+
+    font-weight: 700;
+}
+
+.field input::placeholder {
+    color: #a0aec0;
+}
+
+
+/* =========================================================
+   HARGA ICON
+========================================================= */
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon span {
+    position: absolute;
+
+    left: 13px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    pointer-events: none;
+}
+
+.input-icon input {
+    padding-left: 36px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.form-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 23px;
+}
+
+.btn-tambah,
+.btn-batal {
+    height: 48px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.btn-tambah {
+    background:
+        linear-gradient(
+            135deg,
+            #1677ff,
+            #0868eb
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 16px
+        rgba(22,119,255,0.18);
+}
+
+.btn-tambah:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 9px 20px
+        rgba(22,119,255,0.25);
+}
+
+.btn-batal {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+.btn-batal:hover {
+    background: #e2e8f0;
+}
+
+
+/* =========================================================
+   PHOTO CARD — TERPISAH
+========================================================= */
+
+.photo-card {
+    padding: 21px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border:
+        1px solid #dfe6ee;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 7px 25px
+        rgba(15,23,42,0.05);
+}
+
+.photo-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 15px;
+}
+
+.photo-header h3 {
+    font-size: 15px;
+
+    color: #1e293b;
+
+    margin-bottom: 3px;
+}
+
+.photo-header p {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.photo-badge {
+    padding: 5px 8px;
+
+    background: #edf5ff;
+
+    color: #1677ff;
+
+    border-radius: 6px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.foto-box {
+    position: relative;
+
+    width: 100%;
+
+    height: 215px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffffff,
+            #f1f5f9
+        );
+
+    border:
+        1px dashed #cbd5e1;
+
+    border-radius: 14px;
+}
+
+.foto-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: none;
+}
+
+.foto-placeholder {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+.placeholder-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf2fc;
+
+    border-radius: 14px;
+
+    font-size: 25px;
+}
+
+.photo-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 13px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e9eef3;
+}
+
+.photo-info span {
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+.photo-info strong {
+    max-width: 140px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #334155;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   DAFTAR BELANJA
+========================================================= */
+
+.daftar-belanja {
+    margin-top: 42px;
+}
+
+.table-title {
+    margin-bottom: 15px;
+}
+
+.item-count {
+    padding: 7px 12px;
+
+    background: #eff6ff;
+
+    color: #1677ff;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.item-count span {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+thead {
+    background:
+        linear-gradient(
+            135deg,
+            #1677ff,
+            #126be5
+        );
+
+    color: #ffffff;
+}
+
+th {
+    height: 51px;
+
+    padding: 0 13px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+td {
+    height: 65px;
+
+    padding: 9px 12px;
+
+    text-align: center;
+
+    color: #475569;
+
+    font-size: 12px;
+
+    border-bottom:
+        1px solid #edf1f5;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* FOTO TABEL */
+
+td img {
+    width: 43px;
+    height: 43px;
+
+    object-fit: contain;
+
+    border-radius: 7px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    min-height: 120px;
+}
+
+.empty-state div {
+    font-size: 27px;
+
+    margin-bottom: 4px;
+}
+
+.empty-state strong {
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+.empty-state span {
+    color: #a0aec0;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.action-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 6px;
+}
+
+.btn-edit,
+.btn-delete {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.btn-edit {
+    background: #eff6ff;
+
+    color: #1677ff;
+}
+
+.btn-edit:hover {
+    background: #dbeafe;
+}
+
+.btn-delete {
+    background: #fff1f2;
+
+    color: #e11d48;
+}
+
+.btn-delete:hover {
+    background: #ffe4e6;
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.payment-card {
+    width: 72%;
+
+    min-height: 72px;
+
+    margin: 28px auto 0;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #153f7c,
+            #19478b
+        );
+
+    color: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(21,63,124,0.20);
+}
+
+.payment-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.payment-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border-radius: 10px;
+}
+
+.payment-left span {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.payment-left small {
+    display: block;
+
+    margin-top: 2px;
+
+    color:
+        rgba(255,255,255,0.60);
+
+    font-size: 10px;
+}
+
+.payment-card > strong {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .kasir-container {
+        padding: 30px 25px 40px;
+    }
+
+    .kasir-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card {
+        min-height: 280px;
+    }
+
+    .foto-box {
+        height: 230px;
+    }
+
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .payment-card {
+        width: 85%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 0;
+
+        background: #f5f7fb;
+    }
+
+    .kasir-container {
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 0 14px 105px;
+
+        border: none;
+
+        border-radius: 0;
+
+        box-shadow: none;
+
+        background: #f5f7fb;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        margin:
+            0 -14px 20px;
+
+        padding:
+            27px 19px;
+
+        display: block;
+
+        background:
+            linear-gradient(
+                135deg,
+                #1557a6,
+                #1677ff
+            );
+
+        border-radius:
+            0 0 24px 24px;
+
+        box-shadow:
+            0 8px 25px
+            rgba(21,87,166,0.20);
+    }
+
+    .header-content {
+        gap: 12px;
+    }
+
+    .header-icon {
+        width: 44px;
+        height: 44px;
+
+        font-size: 21px;
+
+        border-radius: 12px;
+    }
+
+    .header h1 {
+        color: #ffffff;
+
+        font-size: 23px;
+    }
+
+    .header p {
+        color:
+            rgba(255,255,255,0.78);
+
+        font-size: 12px;
+    }
+
+    .status-online {
+        display: none;
+    }
+
+
+    /* SECTION */
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .section-title p {
+        font-size: 11px;
+    }
+
+
+    /* LAYOUT */
+
+    .kasir-layout {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    /* FORM */
+
+    .form-card {
+        padding: 18px 15px;
+
+        border-radius: 18px;
+    }
+
+    .form-card-title {
+        padding-bottom: 15px;
+
+        margin-bottom: 15px;
+    }
+
+    .form-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .field label {
+        font-size: 12px;
+    }
+
+    .field select,
+    .field input {
+        height: 49px;
+
+        font-size: 13px;
+    }
+
+
+    /* PHOTO */
+
+    .photo-card {
+        padding: 17px;
+
+        border-radius: 18px;
+    }
+
+    .foto-box {
+        height: 210px;
+    }
+
+
+    /* BUTTON */
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-tambah,
+    .btn-batal {
+        width: 100%;
+
+        height: 50px;
+    }
+
+
+    /* TABLE */
+
+    .daftar-belanja {
+        margin-top: 30px;
+    }
+
+    .table-wrapper {
+        border-radius: 15px;
+    }
+
+    table {
+        min-width: 720px;
+    }
+
+    th {
+        height: 50px;
+
+        font-size: 11px;
+    }
+
+    td {
+        font-size: 11px;
+    }
+
+
+    /* PAYMENT */
+
+    .payment-card {
+        position: fixed;
+
+        z-index: 100;
+
+        left: 9px;
+        right: 9px;
+        bottom: 9px;
+
+        width: auto;
+
+        min-height: 64px;
+
+        margin: 0;
+
+        padding: 0 17px;
+
+        border-radius: 16px;
+    }
+
+    .payment-card > strong {
+        font-size: 17px;
+    }
+
+    .payment-left span {
+        font-size: 12px;
+    }
+
+    .payment-left small {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE KECIL
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .kasir-container {
+        padding-left: 10px;
+
+        padding-right: 10px;
+    }
+
+    .header {
+        margin-left: -10px;
+
+        margin-right: -10px;
+
+        padding: 25px 16px;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .form-card,
+    .photo-card {
+        padding: 15px 13px;
+    }
+
+    .foto-box {
+        height: 180px;
+    }
+
+    .payment-card {
+        left: 7px;
+        right: 7px;
+        bottom: 7px;
+    }
+}

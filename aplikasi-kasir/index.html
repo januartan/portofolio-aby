@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Jaket Store Kasir</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <main class="kasir-container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div class="header-content">
+
+                <div class="header-icon">
+                    🧥
+                </div>
+
+                <div>
+                    <h1>Jaket Store Kasir</h1>
+
+                    <p>
+                        Sistem Kasir Penjualan Jaket
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="status-online">
+                <span></span>
+                Kasir Aktif
+            </div>
+
+        </header>
+
+
+        <!-- ================= FORM ================= -->
+
+        <section class="kasir-section">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>Tambah Pesanan</h2>
+
+                    <p>
+                        Pilih produk dan masukkan detail pembelian
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="kasir-layout">
+
+
+                <!-- ================= FORM KIRI ================= -->
+
+                <div class="form-card">
+
+                    <div class="form-card-title">
+                        <span class="mini-icon">🛒</span>
+
+                        <div>
+                            <h3>Detail Produk</h3>
+
+                            <p>Masukkan informasi produk</p>
+                        </div>
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <!-- PRODUK -->
+
+                        <div class="field produk">
+
+                            <label for="namaBarang">
+                                Produk
+                            </label>
+
+                            <select
+                                id="namaBarang"
+                                onchange="ubahHarga()">
+
+                                <option value="">
+                                    Pilih Produk
+                                </option>
+
+                                <option value="Dobujack">
+                                    Dobujack
+                                </option>
+
+                                <option value="Hooligans">
+                                    Hooligans
+                                </option>
+
+                                <option value="Trouble Marker">
+                                    Trouble Marker
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- UKURAN -->
+
+                        <div class="field">
+
+                            <label for="ukuran">
+                                Ukuran
+                            </label>
+
+                            <select id="ukuran">
+
+                                <option value="">
+                                    Pilih Ukuran
+                                </option>
+
+                                <option value="S">S</option>
+
+                                <option value="M">M</option>
+
+                                <option value="L">L</option>
+
+                                <option value="XL">XL</option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- HARGA -->
+
+                        <div class="field">
+
+                            <label for="harga">
+                                Harga
+                            </label>
+
+                            <div class="input-icon">
+
+                                <span>Rp</span>
+
+                                <input
+                                    id="harga"
+                                    readonly>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- JUMLAH -->
+
+                        <div class="field">
+
+                            <label for="jumlah">
+                                Jumlah
+                            </label>
+
+                            <input
+                                id="jumlah"
+                                type="number"
+                                min="1"
+                                placeholder="Masukkan jumlah">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTON -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="button"
+                            class="btn-tambah"
+                            id="btnTambah"
+                            onclick="tambahBarang()">
+
+                            <span>＋</span>
+
+                            Tambah ke Keranjang
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn-batal"
+                            id="btnBatal"
+                            onclick="batalEdit()"
+                            style="display:none;">
+
+                            Batal
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= FOTO KANAN ================= -->
+
+                <div class="photo-card">
+
+                    <div class="photo-header">
+
+                        <div>
+
+                            <h3>Preview Produk</h3>
+
+                            <p>
+                                Tampilan produk yang dipilih
+                            </p>
+
+                        </div>
+
+                        <div class="photo-badge">
+                            FOTO
+                        </div>
+
+                    </div>
+
+
+                    <div class="foto-box">
+
+                        <div
+                            class="foto-placeholder"
+                            id="fotoPlaceholder">
+
+                            <div class="placeholder-icon">
+                                🧥
+                            </div>
+
+                            <span>
+                                Pilih produk
+                            </span>
+
+                        </div>
+
+
+                        <img
+                            id="gambarProduk"
+                            alt="Foto Produk">
+
+                    </div>
+
+
+                    <div class="photo-info">
+
+                        <span>Produk</span>
+
+                        <strong id="namaPreview">
+                            Belum dipilih
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DAFTAR BELANJA ================= -->
+
+        <section class="daftar-belanja">
+
+            <div class="section-title table-title">
+
+                <div>
+
+                    <h2>Daftar Belanja</h2>
+
+                    <p>
+                        Produk yang sudah ditambahkan ke keranjang
+                    </p>
+
+                </div>
+
+                <div class="item-count">
+
+                    <span id="jumlahItem">
+                        0
+                    </span>
+
+                    Item
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Produk</th>
+
+                            <th>Ukuran</th>
+
+                            <th>Harga</th>
+
+                            <th>Jumlah</th>
+
+                            <th>Total</th>
+
+                            <th>Foto</th>
+
+                            <th>Aksi</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="daftarBelanja">
+
+                        <tr id="dataKosong">
+
+                            <td colspan="7">
+
+                                <div class="empty-state">
+
+                                    <div>
+                                        🛒
+                                    </div>
+
+                                    <strong>
+                                        Belum ada belanjaan
+                                    </strong>
+
+                                    <span>
+                                        Tambahkan produk ke keranjang
+                                    </span>
+
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ================= TOTAL ================= -->
+
+            <div class="payment-card">
+
+                <div class="payment-left">
+
+                    <div class="payment-icon">
+                        💳
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total Pembayaran
+                        </span>
+
+                        <small>
+                            Semua produk
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <strong id="totalPembayaran">
+                    Rp 0
+                </strong>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
